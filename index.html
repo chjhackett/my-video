@@ -16,8 +16,18 @@
   </style>
 </head>
 <body>
-  <video autoplay muted playsinline >
+  <video id="delayedVideo" muted playsinline>
     <source src="Comp 144_1.webm" type="video/webm">
+    Your browser does not support the video tag.
   </video>
+
+  <script>
+    setTimeout(() => {
+      const video = document.getElementById('delayedVideo');
+      if (video) {
+        video.play();
+      }
+    }, 19000); // Delay in milliseconds (19 seconds)
+  </script>
 </body>
 </html>
